@@ -15,18 +15,22 @@ It ships a scaffolder and 25 templates, so the agent starts from a working proje
 ## Requirements
 
 - Node.js 20+ and npm
-- `bash`, `python3`, and `unzip` (Git Bash works on Windows)
+- Windows: PowerShell 7 (`pwsh`) — no bash needed
+- macOS / Linux: `bash`, `python3`, and `unzip`
 
 ## Usage
 
+```powershell
+# Windows (PowerShell 7)
+pwsh -NoProfile -File <skill-dir>\scripts\init-webapp.ps1 --list
+pwsh -NoProfile -File <skill-dir>\scripts\init-webapp.ps1 ./app "My Website"
+pwsh -NoProfile -File <skill-dir>\scripts\init-webapp.ps1 ./app "My Website" 12-seaside-stay-fullstack
+```
+
 ```bash
-# List templates
+# macOS / Linux
 bash <skill-dir>/scripts/init-webapp.sh --list
-
-# Create a base project
 bash <skill-dir>/scripts/init-webapp.sh ./app "My Website"
-
-# Create from a template
 bash <skill-dir>/scripts/init-webapp.sh ./app "My Website" 12-seaside-stay-fullstack
 ```
 
